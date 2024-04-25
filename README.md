@@ -7,12 +7,12 @@ Q(s,a), representing the expected cumulative reward of taking action 𝑎 a in s
 
 Here's a description of the FrozenLake-v1 environment and how Q-learning can be applied to solve it:
 
-# Environment Description:
+## Environment Description:
 Grid World: The environment consists of a grid-world where each tile is either frozen (F) or a hole (H). The agent starts at a designated starting position and must navigate to the goal position.
 Actions: The agent can take one of four possible actions: move left, move right, move up, or move down.
 Rewards: The agent receives a reward of 1 if it reaches the goal tile, and 0 otherwise. Falling into a hole results in a reward of 0.
 
-# Q-learning Approach:
+## Q-learning Approach:
 Initialization: Initialize the Q-table, which is a lookup table of state-action pairs, with arbitrary values.
 Exploration vs. Exploitation: Use an epsilon-greedy strategy to balance exploration (trying new actions) and exploitation (choosing the best-known action). Initially, the agent explores the environment more, gradually shifting towards exploitation as learning progresses.
 Update Q-values: Update the Q-values using the Q-learning update rule:
@@ -25,10 +25,10 @@ r is the reward received after taking action 𝑎 in state 𝑠
 α is the learning rate, determining the extent to which new information overrides old information.
 γ is the discount factor, balancing immediate rewards against future rewards.
 
-# Training Process:
+## Training Process:
 The agent interacts with the environment by selecting actions according to the epsilon-greedy policy and updating Q-values based on observed transitions.
 The training process continues until convergence or a predefined number of episodes.
 
-# Evaluation:
+## Evaluation:
 After training, the learned Q-values can be used to guide the agent's actions in the environment. The agent follows the optimal policy derived from the Q-values to navigate the grid-world and reach the goal tile while avoiding holes.
 So, FrozenLake-v1 presents a challenging environment for reinforcement learning algorithms like Q-learning. By iteratively updating action values based on observed rewards, Q-learning enables the agent to learn an optimal policy for navigating the frozen lake and reaching the goal safely.
